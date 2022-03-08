@@ -12,6 +12,11 @@ key = Fernet.generate_key()
 f = Fernet(key)
 
 
+@user.get('/')
+def welcome():
+    return 'Welcome to my api'
+
+
 @user.get('/users', response_model=list[User], tags=['Users'])
 def get_users():
     return conn.execute(users.select()).fetchall()

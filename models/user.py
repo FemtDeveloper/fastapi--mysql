@@ -1,6 +1,7 @@
-from calendar import c
 from sqlalchemy import Integer, String, Table, Column
 from config.db import meta, engine
+import sys
+sys.path.append('..')
 
 
 users = Table('users', meta, Column(

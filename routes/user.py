@@ -17,7 +17,7 @@ def welcome():
     return 'Welcome to my api'
 
 
-@user.get('/users', response_model=list[User], tags=['Users'])
+@user.get('/users',  tags=['Users'])
 def get_users():
     return conn.execute(users.select()).fetchall()
 

@@ -3,12 +3,10 @@ from routes.user import user
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
-    title='Crud api',
-    version='0.0.1',
-    openapi_tags=[{
-        'name': 'users',
-        'description': 'Routes'
-    }])
+    title="Crud api",
+    version="0.0.1",
+    openapi_tags=[{"name": "users", "description": "Routes"}],
+)
 
 origins = [
     "http://localhost.tiangolo.com",

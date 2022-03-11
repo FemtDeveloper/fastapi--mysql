@@ -27,7 +27,7 @@ def get_user_by_id(id: str):
     return conn.execute(users.select().where(users.c.id == id)).first()
 
 
-@user.post('/users', response_model=User, tags=['Users'])
+@user.post('/users', tags=['Users'])
 def create_user(user: User):
     new_user = {'name': user.name.capitalize(),
                 'email': user.email}

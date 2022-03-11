@@ -22,7 +22,7 @@ def get_users():
     return conn.execute(users.select()).fetchall()
 
 
-@user.get('/users/{id}', response_model=User, tags=['Users'])
+@user.get('/users/{id}', tags=['Users'])
 def get_user_by_id(id: str):
     return conn.execute(users.select().where(users.c.id == id)).first()
 
